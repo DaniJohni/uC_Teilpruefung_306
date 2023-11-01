@@ -66,6 +66,7 @@ unsigned char falseCounter = 0;
 //=========================================================
 //Prototypes
 //=========================================================
+void initializing();
 void readInput();
 void process();
 void writeOutput();
@@ -91,7 +92,6 @@ void initializing()
     reset_Zyklus();
     reset_Zyklus1();
     reset_Zyklus2();
-    blink1(0, 0);
 
     //Project specific
     state = CLOSED;
@@ -123,7 +123,7 @@ void main()
 
 void readInput()
 {
-    static unsigned char oldInput = 0; //"static" to make sure variable only gets defined once
+    static unsigned char oldInput = 0; //"static" to make sure variable only gets defined and initialised once
     static unsigned char posEdge = 0;
     static unsigned char negEdge = 0;
 
